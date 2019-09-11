@@ -1,0 +1,287 @@
+/* ================ Google Fonts URL ====================== */
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Playfair+Display+SC|Cormorant+SC|Yeseva+One&display=swap');
+
+/* ================ universal styling ====================== */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ================ navigation styling ====================== */
+.navbar {
+    padding-bottom: 10px;
+    font-size: .9rem;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+
+.nav-links,
+.logo {
+    text-decoration: none;
+    color: grey;
+}
+
+#web_logo {
+  height: 60px;
+  width: 120px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+    font-family: 'Cormorant SC', serif;
+    text-align: center;
+    margin: 15px auto;
+}
+
+.logo {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+}
+
+.active {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+    .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+    }
+
+    .main-nav li {
+    margin: 0;
+    }
+
+    .nav-links {
+    margin-left: 40px;
+    }
+
+    .logo {
+    margin-top: 0;
+    }
+
+    .navbar-toggle {
+    display: none;
+    }
+} /* ================ navigation styling end ====================== */
+
+/* ================ general styling ====================== */
+.fas, .fab {
+  color: #333;
+  font-weight: 600;
+  font-size: 4rem;
+  padding: 8px 0 8px;
+}
+
+.fa-bars {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.fa-twitter, .fa-vk, .fa-facebook-f {
+  font-size: 1.5rem;
+  color: #e3e3e3;
+  font-weight: 500;
+  padding: 0;
+}
+
+h2 {
+  padding: 10px 0;
+}
+
+/* ================ header styling ====================== */
+header {
+   overflow: hidden;
+   position: relative;
+   transform-style: preserve-3d;
+   perspective: 100px;
+ }
+
+ header:before {
+   animation: fade-slide-down 2s .5s forwards;
+   background-image: url("bckgrnd.png");
+  /* background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.3)), url(pexels.jpeg) no-repeat center; */
+   background-size: cover;
+   background-attachment: fixed;
+   content: "";
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: -1;
+ }
+
+ .header-big {
+   margin-bottom: 2.5rem;
+   color: #2E2E2E;
+   text-align: left;
+   font-size: 55px;
+   font-weight: 600;
+   font-family: 'Cormorant SC', serif;
+   line-height: 80px;
+   padding-top: 50px;
+ }
+
+ .header-big span {
+    color: #FFF;
+ }
+
+/* ================ animation styling ====================== */
+ .animate-pop-in {
+   animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+   opacity: 0;
+ }
+
+ .header-big {
+   animation-delay: 1.3s;
+ }
+
+ @keyframes fade-slide-down {
+   0% {
+     opacity: 0;
+     transform: translateY(-4rem);
+   }
+   100% {
+     opacity: 1;
+     transform: none;
+   }
+ }
+
+ @keyframes pop-in {
+   0% {
+     opacity: 0;
+     transform: translateY(-4rem) scale(.8);
+   }
+   100% {
+     opacity: 1;
+     transform: none;
+   }
+ }
+
+  /* ================ work & skillSet styling ====================== */
+
+ #work, #skillSet {
+   color: #333;
+   letter-spacing: 1px;
+ }
+
+ #work {
+   padding: 30px;
+ }
+
+ .skillSet {
+   margin-top: 30px;
+   background-color: rgb(240, 240, 240);
+   padding-top: 20px;
+   padding-bottom: 15px;
+ }
+
+#guide {
+  font-family: 'Playfair Display SC', serif;
+  text-align: center;
+  letter-spacing: 10px;
+  color: grey;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 20px 0 10px;
+  font-weight: 600;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card1 {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+h3 {
+  font-family: 'Cormorant SC', serif;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#bold {
+  font-weight: 600;
+}
+
+.cards, .card-1 {
+  flex: 1 0 200px;
+  line-height: 1.7;
+}
+
+.col-1, .col-2, .col-3, .col-4 {
+  padding: 10px;
+  text-align: center;
+}
+/* ================ skillSet styling end ====================== */
+
+/* ================ footer styling ====================== */
+.footer {
+  background-color: #333;
+  padding: 10px 0;
+  color: #e3e3e3;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  padding: 2em;
+}
+
+.footer p {
+  padding: 0 8px;
+}
+
+.footer ul {
+  display: flex;
+  padding: 0 8px;
+  list-style: none;
+  justify-content: center;
+}
+
+.footer li {
+    padding: 0 10px;
+    margin: 0;
+}
+/* =================== code end ===================  */
